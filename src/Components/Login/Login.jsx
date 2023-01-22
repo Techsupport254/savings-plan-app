@@ -2,12 +2,6 @@ import React from "react";
 import "./Login.css";
 
 const Login = () => {
-    // login with google account api
-    const responseGoogle = (response) => {
-        console.log(response);
-    };
-
-
 	return (
 		<div className="Login">
 			<div className="LoginContainer">
@@ -36,8 +30,14 @@ const Login = () => {
 						<div className="FormButton">
 							<button type="submit">Login</button>
 						</div>
-						<h4>Don't have an account? 
-							<a href="/register">Register here</a>
+						<h4>
+							Don't have an account?
+							<a
+								href="/register"
+								style={{ textDecoration: "none", color: "var(--accent-color)" }}
+							>
+								Register here
+							</a>
 						</h4>
 					</div>
 				</div>
@@ -46,19 +46,14 @@ const Login = () => {
 				<div className="FormBox">
 					<div className="Form">
 						<div className="FormButton">
-							<button type="submit"
-                                onClick={responseGoogle}
-                            >
+							<button type="submit">
 								<i className="fab fa-google"></i>
 								Google
 							</button>
-                            <button
-                                type="submit"
-                                onClick={responseGoogle}
-                            >
-                                <i className="fab fa-facebook"></i>
-                                Facebook
-                            </button>
+							<button type="submit">
+								<i className="fab fa-facebook"></i>
+								Facebook
+							</button>
 						</div>
 					</div>
 				</div>

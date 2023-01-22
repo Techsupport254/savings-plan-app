@@ -58,6 +58,25 @@
     -o-border-radius: var(--border-radius);
 }
 
+.column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: .5rem;
+    box-shadow: 0 0 0 3px rgba(214, 205, 205, 0.08);
+    -webkit-box-shadow: 0 0 0 3px rgba(214, 205, 205, 0.08);
+    -moz-box-shadow: 0 0 0 3px rgba(214, 205, 205, 0.08);
+    -ms-box-shadow: 0 0 0 3px rgba(214, 205, 205, 0.08);
+    -o-box-shadow: 0 0 0 3px rgba(214, 205, 205, 0.08);
+    border-radius: var(--border-radius);
+    -webkit-border-radius: var(--border-radius);
+    -moz-border-radius: var(--border-radius);
+    -ms-border-radius: var(--border-radius);
+    -o-border-radius: var(--border-radius);
+}
+
 h3 {
     color: var(--accent-color);
     margin: 1rem;
