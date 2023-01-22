@@ -1,38 +1,70 @@
+:root {
+    --yellow: linear-gradient(180deg, #F8D49A -146.42%, #FAD79D -46.42%);
+    --orange: #fca61f;
+    --black: #242d49;
+    --gray: #788097;
+    --purple: linear-gradient(180deg, #BB67FF 0%, #C484F3 100%);
+    --pink: #FF919D;
+    --glass: rgba(255, 255, 255, 0.54);
+    --boxShadow: 0 0 0 1px rgba(245, 241, 241, 0.08);
+    --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
+    --activeItem: #f799a354;
+    --bg-color: hsl(240, 3%, 15%);
+    --bg-color-danger: hsl(0, 48%, 47%);
+    --bg-color-success: hsl(112, 34%, 46%);
+    --bg-color-clear: hsla(240, 3%, 15%, 0.749);
+    --text-color: hsl(0, 0%, 100%);
+    --accent-color: hsl(39, 48%, 57%);
+    --font-family: 'Raleway', sans-serif;
+    --border-radius: 0.5rem;
+    --bg-color: hsl(240, 3%, 15%);
+    --bg-color-clear: hsla(240, 3%, 15%, 0.749);
+    --text-color: hsl(0, 0%, 100%);
+    --accent-color: hsl(39, 48%, 57%);
+    --font-family: 'Raleway', sans-serif;
+    --border-radius: 0.5rem;
+}
+
 .App {
-  text-align: center;
+    background: var(--bg-color);
+    height: 100vh;
+    width: 100%;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: .5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.AppGlass {
+    height: 98%;
+    width: 98%;
+    background: rgb(16, 36, 42);
+    display: grid;
+    grid-template-columns: 15% auto 20%;
+    border-radius: var(--border-radius);
+    -webkit-border-radius: var(--border-radius);
+    -moz-border-radius: var(--border-radius);
+    -ms-border-radius: var(--border-radius);
+    -o-border-radius: var(--border-radius);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h3 {
+    color: var(--accent-color);
+    margin: 1rem;
+    gap: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a {
+    text-decoration: none;
+    color: var(--text-color);
 }

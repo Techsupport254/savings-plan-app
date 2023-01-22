@@ -1,0 +1,181 @@
+.Login {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.LoginContainer {
+    width: 98%;
+    height: 98%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    -webkit-border-radius: var(--border-radius);
+    -moz-border-radius: var(--border-radius);
+    -ms-border-radius: var(--border-radius);
+    -o-border-radius: var(--border-radius);
+}
+
+.FormBox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 0 1px rgb(104, 95, 95);
+    -webkit-border-radius: var(--border-radius);
+    -moz-border-radius: var(--border-radius);
+    -ms-border-radius: var(--border-radius);
+    -o-border-radius: var(--border-radius);
+}
+
+.Form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: .5rem;
+}
+
+.Form h1 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-bottom: 3px solid var(--accent-color);
+    margin-bottom: .5rem;
+}
+
+.FormInput {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.FormInput input {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    margin-top: .5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease-in-out;
+    -webkit-border-radius: var(--border-radius);
+    -moz-border-radius: var(--border-radius);
+    -ms-border-radius: var(--border-radius);
+    -o-border-radius: var(--border-radius);
+}
+
+.FormInput input:focus {
+    border-bottom: 1px solid var(--primary-color);
+}
+
+
+.FormInput input:focus::placeholder {
+    color: var(--primary-color);
+}
+
+.Checkbox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.FormCheckbox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.FormButton {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.FormButton button {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    gap: 1rem;
+    border-radius: var(--border-radius);
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all .5s ease-in;
+    -webkit-transition: all .5s ease-in;
+    -moz-transition: all .5s ease-in;
+    -ms-transition: all .5s ease-in;
+    -o-transition: all .5s ease-in;
+}
+
+.FormButton button:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: 1px solid var(--accent-color);
+}
+
+.FormButton button:active {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+}
+
+.FormButton button:focus {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+}
+
+.FormButton button:disabled {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+}
+
+.FormButton button:disabled:hover {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+}
+
+.FormButton button:disabled:active {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+}
