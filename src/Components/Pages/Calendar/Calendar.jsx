@@ -4,6 +4,10 @@ import "./Calendar.css";
 const Calendar = () => {
 	const [currentDate, setCurrentDate] = useState(new Date());
 	const [selectedDate, setSelectedDate] = useState(null);
+	const [time, setTime] = useState(new Date());
+	const [modalIsOpen, setModalIsOpen] = useState(false);
+	const [markedDates, setMarkedDates] = useState([]);
+	const [unmarkedDates, setUnmarkedDates]=useState([]);
 
 	const monthNames = [
 		"January",
@@ -60,20 +64,23 @@ const Calendar = () => {
 
 	const handleDateClick = (date) => {
 		setSelectedDate(date);
+		setModalIsOpen(true);
+
+		if (selectedDate === date) {
+			setSelectedDate(null);
+			setModalIsOpen(false);
+		}
+	};
+	const handleCurrentTime = () => {
+		// display time which seconds update every time
+		setInterval(() => {
+			setTime(new Date());
+		}, 1000);
+		return time.toLocaleTimeString();
 	};
 
-	// handle checking dates using right click
-	const handleDateRightClick = (date) => {
-		// display modal dialog to check the date
-		console.log("right click");
-
-		// set the date to be checked
-		setSelectedDate(date);
-
-		// display the modal dialog
-		
-	};
-
+	// set dates that are not marked as unmarked dates
+	
 	return (
 		<div className="calendar">
 			<div className="CalendarContainer">
@@ -89,9 +96,12 @@ const Calendar = () => {
 							Month
 						</button>
 					</div>
-					<span className="current-month">
-						{monthNames[currentDate.getMonth()]} {currentDate.getFullYear()}
-					</span>
+					<div className="Current">
+						<span className="current-month">
+							{monthNames[currentDate.getMonth()]} {currentDate.getFullYear()}
+						</span>
+						<span className="CurrentTime">{handleCurrentTime()}</span>
+					</div>
 					<div className="Month">
 						{" "}
 						<button onClick={handleNextYear}>
@@ -149,20 +159,129 @@ const Calendar = () => {
 								<span
 									key={i}
 									className={
-										className + (selectedDate === date ? " selected-date" : "")
+										className +
+										(selectedDate === date ? " SelectedDate" : "") +
+										(markedDates.find(
+											(d) =>
+												d.date === date &&
+												d.month === currentDate.getMonth() &&
+												d.year === currentDate.getFullYear()
+										)
+											? " MarkedDate"
+											: "") +
+										(unmarkedDates.find(
+											(d) =>
+												d.date === date &&
+												d.month === currentDate.getMonth() &&
+												d.year === currentDate.getFullYear()
+										)
+											? " UnmarkedDate"
+											: "")
 									}
 									onClick={() => handleDateClick(date)}
 									onContextMenu={(e) => {
 										e.preventDefault();
-										handleDateRightClick(date);
+										handleDateClick(date);
+										setModalIsOpen(true);
 									}}
 								>
 									{date}
 								</span>
 							);
 						})}
+						{
+							// show modal
+							modalIsOpen && (
+								<div className="Modal">
+									<div className="ModalContainer">
+										<div className="ModalHeader">
+											<h3>
+												{markedDates.find(
+													(d) =>
+														d.date === selectedDate &&
+														d.month === currentDate.getMonth() &&
+														d.year === currentDate.getFullYear()
+												)
+													? "Unmark"
+													: "Mark"}{" "}
+												Date
+											</h3>
+											<button
+												className="CloseModal"
+												onClick={() => setModalIsOpen(false)}
+											>
+												<i className="fas fa-times"></i>
+											</button>
+										</div>
+
+										<div className="ModalBody">
+											<div className="MarkDate">
+												<button
+													onClick={() => {
+														if (
+															markedDates.find(
+																(d) =>
+																	d.date === selectedDate &&
+																	d.month === currentDate.getMonth() &&
+																	d.year === currentDate.getFullYear()
+															)
+														) {
+															setMarkedDates(
+																markedDates.filter(
+																	(d) =>
+																		d.date !== selectedDate ||
+																		d.month !== currentDate.getMonth() ||
+																		d.year !== currentDate.getFullYear()
+																)
+															);
+														} else {
+															setMarkedDates([
+																...markedDates,
+																{
+																	date: selectedDate,
+																	month: currentDate.getMonth(),
+																	year: currentDate.getFullYear(),
+																},
+															]);
+														}
+
+														setModalIsOpen(false);
+													}}
+												>
+													{markedDates.find(
+														(d) =>
+															d.date === selectedDate &&
+															d.month === currentDate.getMonth() &&
+															d.year === currentDate.getFullYear()
+													) ? (
+														<i className="fas fa-check"></i>
+													) : (
+														<i className="far fa-check-circle"></i>
+													)}
+												</button>
+											</div>
+											<div className="ModalDate">
+												<span>{selectedDate} </span>
+												<span>{monthNames[currentDate.getMonth()]} </span>
+												<span>{currentDate.getFullYear()}</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							)
+						}
 					</div>
 				</div>
+			</div>
+			<div className="SavedDates">
+				<h2>Saved Dates</h2>
+				{markedDates.map((date, i) => (
+					<div key={i} className="SavedDate">
+						<span>{date.date} </span>
+						<span>{monthNames[date.month]} </span>
+						<span>{date.year}</span>
+					</div>
+				))}
 			</div>
 		</div>
 	);

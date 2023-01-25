@@ -1,4 +1,13 @@
 .calendar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.CalendarContainer {
+
     width: 400px;
     display: flex;
     flex-direction: column;
@@ -18,6 +27,14 @@
     border-bottom: 2px solid #4b676f;
     width: 100%;
     padding-bottom: 1rem;
+}
+
+.Current {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
 
 .Year {
@@ -144,7 +161,7 @@ button:disabled:hover {
     background-color: #4b676f;
 }
 
-.selected-date {
+.SelectedDate {
     background-color: #5bc0de;
     color: #fff;
     /*animation*/
@@ -160,4 +177,193 @@ button:disabled:hover {
     100% {
         opacity: 1;
     }
+}
+
+.Modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* animation */
+    animation: fadeIn 0.5s ease-in-out;
+    -webkit-animation: fadeIn 0.5s ease-in-out;
+    -moz-animation: fadeIn 0.5s ease-in-out;
+    -ms-animation: fadeIn 0.5s ease-in-out;
+    -o-animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.ModalContainer {
+    position: fixed;
+    top: 40%;
+    left: 36%;
+    z-index: 1;
+    width: 20%;
+    height: 20%;
+    background: var(--bg-color-clear);
+    border-radius: 0.7rem;
+    padding: 1rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 3px rgb(128, 125, 125);
+}
+
+.ModalHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.CloseModal {
+    color: var(--accent-color);
+    font-family: var(--font-family);
+    font-weight: bold;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    background: none;
+    color: var(--accent-color);
+}
+
+.CloseModal .fas {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    transition: all .5s ease-in-out;
+}
+
+.CloseModal .fas:hover {
+    color: var(--orange);
+    transform: scale(1.1);
+}
+
+.ModalBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.ModalDate {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.ModalDate span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.ModalDate .fas {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+}
+
+.MarkDate {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.MarkDate button {
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4b676f;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+}
+
+.MarkDate button:hover {
+    background-color: #4c734c;
+    /* wave animation */
+    animation: wave 0.5s ease-in-out;
+}
+
+@keyframes wave {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.MarkedDate {
+    background: rgb(143, 206, 152);
+    color: #fff;
+    border: 2px dotted var(--accent-color);
+    padding: 0;
+    margin: 0;
+    height: 3.2rem !important;
+    width: 3.2rem !important;
+    transition: all 0.5s ease-in-out;
+    /* animation */
+    animation: fadeIn 0.5s ease-in-out;
+
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.UnmarkedDate{
+    background: #4b676f;
+    color: #fff;
+    border: 2px dotted var(--accent-color);
+    padding: 0;
+    margin: 0;
+    height: 3.2rem !important;
+    width: 3.2rem !important;
+    transition: all 0.5s ease-in-out;
+    /* animation */
+    animation: fadeIn 0.5s ease-in-out;
 }

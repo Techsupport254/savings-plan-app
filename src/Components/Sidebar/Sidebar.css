@@ -103,8 +103,24 @@
 }
 
 .active {
-    background: var(--activeItem);
+    background-color: #3a4e53;
     margin-left: 0;
+    /*animation*/
+    animation: fadeIn .5s ease-in;
+}
+
+@keyframes fadeIn {
+    0% {
+        z-index: 0;
+    }
+
+    50% {
+        z-index: .5;
+    }
+
+    100% {
+        z-index: 1;
+    }
 }
 
 .active::before {
