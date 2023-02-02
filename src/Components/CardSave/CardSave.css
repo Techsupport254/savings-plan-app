@@ -1,0 +1,56 @@
+.Progress {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.Header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.Header .fas {
+    top: 0;
+    right: 0;
+}
+
+.progress-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.progress-bar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.progress-bar {
+    position: relative;
+    width: 100px;
+    height: 100px;
+
+}
+
+.progress-bar__circle {
+    fill: none;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+
+.progress-bar__percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import "./RightBar.css";
 import Notifications from "../Notifications/Notifications";
 
 const RightBar = () => {

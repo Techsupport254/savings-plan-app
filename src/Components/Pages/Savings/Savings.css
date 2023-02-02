@@ -1,0 +1,28 @@
+.savings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "top-grid top-grid" "middle-grid middle-grid" "bottom-grid bottom-grid";
+  height: 100vh;
+}
+
+.top-grid {
+  grid-area: top-grid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.middle-grid {
+  grid-area: middle-grid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-grid {
+  grid-area: bottom-grid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

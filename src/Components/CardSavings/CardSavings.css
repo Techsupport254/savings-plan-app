@@ -1,0 +1,54 @@
+.cardSavings {
+    padding: 1rem;
+    text-align: center;
+    border-radius: 0.5rem;
+}
+
+.cardSavings span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.CardContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+button {
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.ProgressContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+progress {
+    width: 100%;
+    appearance: none;
+    border: none;
+    background-color: #ddd;
+    height: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #ddd;
+}
+
+progress::-webkit-progress-value {
+    background-color: #4CAF50;
+}

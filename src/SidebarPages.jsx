@@ -9,20 +9,24 @@ import Calendar from "./Components/Pages/Calendar/Calendar";
 import Reports from "./Components/Pages/Reports/Reports";
 import History from "./Components/Pages/History/History";
 import Settings from "./Components/Pages/Settings/Settings";
+import Register from "./Components/Register/Register";
+import Login from "./Components/Login/Login";
 
 const SidebarPages = () => {
 	return (
 		<React.Fragment>
 			<Routes>
 				<Route path="/account" element={<Account />} />
-				<Route path="/dashboard" element={<Dashboard />} />
-				<Route path="/about" element={<About />} />
-				<Route path="/savings" element={<Savings />} />
-				<Route path="/loans" element={<Loans/>} />
-				<Route path="/calendar" element={<Calendar/>}/>
-				<Route path="/reports" element={<Reports/>}/>
-				<Route path="/history" element={<History/>}/>
-				<Route path="/settings" element={<Settings/>}/>
+				<Route path="/account/dashboard" element={<Dashboard />} />
+				<Route path="/account/about" element={<About />} />
+				<Route path="/account/savings" element={<Savings />} />
+				<Route path="/account/loans" element={<Loans />} />
+				<Route path="/account/calendar" element={<Calendar />} />
+				<Route path="/account/reports" element={<Reports />} />
+				<Route path="/account/history" element={<History />} />
+				<Route path="/account/settings" element={<Settings />} />
+				<Route path="/account/register" element={<Register />} />
+				<Route path="/account/login" element={<Login />} />
 			</Routes>
 		</React.Fragment>
 	);

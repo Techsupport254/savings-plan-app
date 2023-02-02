@@ -25,8 +25,21 @@
     --border-radius: 0.5rem;
 }
 
-.App {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+body {
     background: var(--bg-color);
+    height: 100vh;
+    width: 100%;
+}
+
+.App {
+    background: rgb(16, 36, 42);
     height: 100vh;
     width: 100%;
     color: var(--text-color);
@@ -34,15 +47,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.column {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin: .5rem;
 }
 
 .AppGlass {
@@ -54,13 +58,14 @@
     border-radius: var(--border-radius);
 }
 
-.column{
+.column {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 0 3px rgba(214, 205, 205, 0.08);
     border-radius: var(--border-radius);
+    overflow: hidden;
 }
 
 h3 {
@@ -72,4 +77,95 @@ h3 {
 a {
     text-decoration: none;
     color: var(--text-color);
+}
+
+.Loading {
+    width: 100%;
+    height: 100vh;
+    background: rgb(16, 36, 42);
+}
+
+.LoadingContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    background: rgb(16, 36, 42);
+    border: 3px solid #3c3c3c;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 150px;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: var(--accent-color);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px var(--accent-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+}
+
+.LoadingContainer img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.LoadingContainer:before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid transparent;
+    border-top: 3px solid var(--accent-color);
+    border-bottom: 3px solid var(--accent-color);
+    border-radius: 50%;
+    animation: animateC 2s linear infinite;
+}
+
+.Loading span {
+    display: block;
+    position: absolute;
+    top: calc(50% - 2px);
+    left: 50%;
+    width: 50%;
+    height: 4px;
+    background: transparent;
+    transform-origin: left;
+    animation: animate 2s linear infinite;
+}
+
+.Loading span:before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    top: -6px;
+    right: -8px;
+    box-shadow: 0 0 20px var(--accent-color);
+}
+
+@keyframes animateC {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(45deg);
+    }
+
+    100% {
+        transform: rotate(405deg);
+    }
 }

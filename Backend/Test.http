@@ -1,0 +1,8 @@
+POST http://localhost:4000/app/Register
+Content-Type: application/json
+
+{
+    "username": "Quaint",
+    "password": "3323",
+    "email": "kiruivictor097@gmail.com"
+}

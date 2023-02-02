@@ -1,9 +1,19 @@
 .Dashboard {
-    height: 100vh;
-    width: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 1rem;
 }
 
 .DashboardContainer {
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
     width: 100%;
+    height: 100%;
 }

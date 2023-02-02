@@ -4,20 +4,23 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 0 3px rgba(214, 205, 205, 0.08);
+
 }
 
 .CalendarContainer {
-
     width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-    padding: 1rem;
     border-radius: 5px;
     margin: 1rem;
     box-shadow: 0 0 0 3px rgba(214, 205, 205, 0.08);
+    
 }
 
 .calendar-header {
@@ -73,7 +76,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    width: 100%;
 }
 
 .weekdays span,
@@ -85,22 +87,10 @@
     text-align: center;
     justify-content: center;
     border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
     /* animation */
     animation: fadeIn 0.5s ease-in-out;
-    -webkit-animation: fadeIn 0.5s ease-in-out;
-    -moz-animation: fadeIn 0.5s ease-in-out;
-    -ms-animation: fadeIn 0.5s ease-in-out;
-    -o-animation: fadeIn 0.5s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -337,8 +327,7 @@ button:disabled:hover {
     border: 2px dotted var(--accent-color);
     padding: 0;
     margin: 0;
-    height: 3.2rem !important;
-    width: 3.2rem !important;
+    color: var(--black);
     transition: all 0.5s ease-in-out;
     /* animation */
     animation: fadeIn 0.5s ease-in-out;

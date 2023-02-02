@@ -1,0 +1,43 @@
+.Cards {
+    display: grid;
+    border-radius: var(--border-radius);
+    width: 100%;
+}
+
+
+.CardsContainer {
+    grid-template-columns: 30% 30% 30%;
+    display: grid;
+    grid-gap: 1rem;
+    border-radius: var(--border-radius);
+    width: 100%;
+}
+
+.Card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 12rem;
+    width: 15rem;
+    padding: .5rem;
+    gap: 1rem;
+    border-radius: var(--border-radius);
+    background-image: linear-gradient(to left bottom, #29284f, #28264b, #272346, #252142, #241f3e, #241e3b, #241e39, #241d36, #251e35, #261f34, #262033, #272132);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.Card:hover {
+    transform: scale(1.05);
+    background-image: linear-gradient(to left bottom, #646369, #b9b8c9, #342d6b, #342c71, #2d235d, #1f183a, #4e3b93, #7662a9, #2c195a, #3a2a5a, #412e6b, #612ec2);
+}
+
+.Header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-color);
+    gap: .5rem;
+}

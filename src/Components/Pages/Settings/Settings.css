@@ -1,0 +1,24 @@
+.settings-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.settings-group {
+  width: 80%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.settings-item p {
+  margin: 0;
+}
