@@ -1,6 +1,9 @@
 # Savings Plan App
 
-<p>p>A React Js Web Application that enables registered users to track their savings by marking an amount saved each day. The app is divided into three sections, the sidebar, rightbar, and the maindash. The sidebar has menu items including Dashboard which has three sections too: the top, middle and bottom section. The top section has 3 cards - savings card, save card, and quotes card which fetches quotes from an API.</p>
+<!-- screenshot -->
+<img src="./src/Assets/IMGS/image.png" alt="Screenshot" width="100%" height="100%">
+
+<p>A React Js Web Application that enables registered users to track their savings by marking an amount saved each day. The app is divided into three sections, the sidebar, rightbar, and the maindash. The sidebar has menu items including Dashboard which has three sections too: the top, middle and bottom section. The top section has 3 cards - savings card, save card, and quotes card which fetches quotes from an API.</p>
 
 ## Features
 
@@ -29,7 +32,9 @@
 <li>React Router Dom</li>
 <li>React Router Bootstrap</li>
 <li>React Router Hash Link</li>
-<li>React Router Transition</li>
+<li>React ant design</li>
+<li>React Chart JS</li>
+</ul>
 
 ## Installation
 
