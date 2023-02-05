@@ -23,7 +23,7 @@
     padding: .5rem;
     gap: 1rem;
     border-radius: var(--border-radius);
-    background-image: linear-gradient(to left bottom, #29284f, #28264b, #272346, #252142, #241f3e, #241e3b, #241e39, #241d36, #251e35, #261f34, #262033, #272132);
+    background: var(bg-card);
     cursor: pointer;
     transition: all .2s ease-in-out;
 }

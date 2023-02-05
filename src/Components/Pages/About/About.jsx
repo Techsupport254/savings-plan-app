@@ -6,10 +6,45 @@ const About = () => {
 		<div className="About">
 			<div className="AboutContainer">
 				<h3>About the Savings Plan App</h3>
-				<p>
-					The Savings Plan App is a web app designed to help you keep track of
-					your daily savings.
-				</p>
+				<ul>
+					<li>
+						The Savings Plan web app is a tool designed to help users manage and
+						track their financial savings goals. The app provides a simple and
+						intuitive interface for setting up savings plans and tracking
+						progress towards those goals.
+					</li>
+					<li>
+						Users start by creating an account and setting up a savings plan.
+						This involves specifying the amount they would like to save, the
+						deadline for reaching their goal, and any other relevant
+						information. Once a savings plan has been created, users can
+						regularly track their progress and make adjustments to their plans
+						as needed.
+					</li>
+					<li>
+						The app includes several features to help users stay on track with
+						their savings goals. For example, users can set up automatic savings
+						transfers from their bank account to their savings account, making
+						it easier to consistently save money. They can also receive
+						reminders and notifications to help them stay focused on their
+						goals.
+					</li>
+					<li>
+						Additionally, the app offers a range of financial tools and
+						resources to help users make informed decisions about their savings
+						plans. This includes access to articles and guides on personal
+						finance, as well as calculators and other tools for estimating how
+						long it will take to reach their goals and how much they need to
+						save each month to get there.
+					</li>
+					<li>
+						Overall, the Savings Plan web app is an excellent resource for
+						anyone looking to take control of their finances and save more
+						effectively. Whether you're trying to save for a down payment on a
+						house, a big purchase, or just a rainy day fund, the app provides
+						the tools and resources you need to reach your goals.
+					</li>
+				</ul>
 			</div>
 			<div className="Terms">
 				<h3>Terms and Conditions</h3>
@@ -55,7 +90,7 @@ const About = () => {
 						app.
 					</li>
 					<li>
-						li Dispute Resolution: If a dispute arises between you and the
+						Dispute Resolution: If a dispute arises between you and the
 						savings plan app, we agree to first try to resolve the dispute
 						informally.
 					</li>

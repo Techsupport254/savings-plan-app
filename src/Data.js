@@ -74,12 +74,12 @@ export const notificationData = [
 		id: 3,
 		message: "You have reached 50% of your savings goal",
 		date: "2023-01-28",
-		time: "05:00 PM",
+		time: "09:00 PM",
 	},
 	{
 		id: 4,
 		message: "You have reached 50% of your savings goal",
-		date: "2023-01-28",
+		date: "2023-01-29",
 		time: "05:00 PM",
 	},
 	{

@@ -1,59 +1,65 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./CardSavings.css";
 
-const CardSavings = () => {
-	const [currentSavings, setCurrentSavings] = useState(0);
-	const [savedDates, setSavedDates] = useState([]);
-	const [todaySaved, setTodaySaved] = useState(false);
-	const today = new Date();
-	const currentMonth = today.getMonth();
-	const currentYear = today.getFullYear();
-	const currentDate = today.getDate();
+const Progress = ({ currentMonth, currentYear }) => {
+	const circumference = 2 * Math.PI * 7;
+	const currentMonthProgress = (currentMonth / 30) * 100;
+	const currentYearProgress = (currentYear / 365) * 100;
 
-	useEffect(() => {
-		const getPreviousDates = () => {
-			const previousMonthDates = [];
-			for (let month = 0; month < currentMonth; month++) {
-				const daysInMonth = new Date(currentYear, month + 1, 0).getDate();
-				for (let date = 1; date <= daysInMonth; date++) {
-					previousMonthDates.push(date);
-				}
-			}
-			return previousMonthDates;
-		};
-
-		const previousDates = Array.from({ length: currentDate }, (_, i) => i + 1)
-			.concat(getPreviousDates())
-			.filter((date) => !savedDates.includes(date))
-			.reduce((acc, date) => acc + date, 0);
-
-		setCurrentSavings(currentSavings + previousDates);
-		setSavedDates([
-			...savedDates,
-			...Array.from({ length: currentDate }, (_, i) => i + 1),
-			...getPreviousDates(),
-		]);
-	}, [currentSavings, savedDates, currentMonth, currentYear, currentDate]);
-
-	const handleSaveToday = () => {
-		if (!todaySaved) {
-			setCurrentSavings(currentSavings + currentDate);
-			setSavedDates([...savedDates, currentDate]);
-			setTodaySaved(true);
-		}
-	};
+	// current savings
+	const currentSavings =
+		[currentMonthProgress, currentYearProgress].reduce((acc, curr) => {
+			return acc + curr;
+		}) / 2;
 
 	return (
-		<div className="CardSavings">
-			<div className="CardContainer">
-				<span>KES {currentSavings}</span>
-				<button disabled={todaySaved} onClick={handleSaveToday}>
-					Save Today
-				</button>
-				<button>Save for previous dates</button>
+		<div className="Progress">
+			<span>Kes. {currentSavings}</span>
+			<button>Save Today</button>
+			<div className="progress-container">
+				<div className="progress-bar-container">
+					<div className="progress-bar">
+						<svg width="100" height="100">
+							<circle
+								className="progress-bar__circle"
+								cx="50"
+								cy="50"
+								r="30"
+								stroke="#2980b9"
+								strokeWidth="7"
+								strokeDasharray={`${
+									circumference * (currentMonthProgress / 100)
+								} ${circumference}`}
+							/>
+						</svg>
+						<div className="progress-bar__percentage">
+							{currentMonthProgress.toFixed(2)}%
+						</div>
+					</div>
+				</div>
+				<div className="progress-bar-container">
+					<div className="progress-bar">
+						<svg width="100" height="100">
+							<circle
+								className="progress-bar__circle"
+								cx="50"
+								cy="50"
+								r="30"
+								stroke="#f39c12"
+								strokeWidth="7"
+								strokeDasharray={`${
+									circumference * (currentYearProgress / 100)
+								} ${circumference}`}
+							/>
+						</svg>
+						<div className="progress-bar__percentage">
+							{currentYearProgress.toFixed(2)}%
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	);
 };
 
-export default CardSavings;
+export default Progress;

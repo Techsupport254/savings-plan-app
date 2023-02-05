@@ -22,7 +22,17 @@ const SavingsTable = () => {
 				return {
 					...date,
 					saved: true,
-					savedAt: new Date().toLocaleDateString(),
+					savedAt:
+						new Date().toLocaleDateString("en-US", {
+							year: "numeric",
+							month: "short",
+							day: "numeric",
+						}) +
+						" " +
+						new Date().toLocaleTimeString("en-US", {
+							hour: "numeric",
+							minute: "numeric",
+						}),
 				};
 			}
 			return date;
@@ -91,7 +101,9 @@ const SavingsTable = () => {
 									<td>{date.id}</td>
 									<td>{date.id}</td>
 									<td>{date.saved ? "Saved" : "Not Saved"}</td>
-									<td>{date.savedAt || "-"}</td>
+									<td>
+										<span>{date.savedAt || "-"}</span>
+									</td>
 									<td>
 										<button
 											className="SaveButton"

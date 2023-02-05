@@ -13,6 +13,7 @@
     --bg-color-danger: hsl(0, 48%, 47%);
     --bg-color-success: hsl(112, 34%, 46%);
     --bg-color-clear: hsla(240, 3%, 15%, 0.749);
+    --bg-card: linear-gradient(to left bottom, #29284f, #28264b, #272346, #252142, #241f3e, #241e3b, #241e39, #241d36, #251e35, #261f34, #262033, #272132);
     --text-color: hsl(0, 0%, 100%);
     --accent-color: hsl(39, 48%, 57%);
     --font-family: 'Raleway', sans-serif;

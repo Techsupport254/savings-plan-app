@@ -1,7 +1,6 @@
 .About {
   display: grid;
-  grid-template-rows: 30% auto 30%;
-  overflow-y: auto;
+  grid-template-rows: 38% 38% 20%;
   padding: .5rem;
   border-radius: var(--border-radius);
   gap: .5rem;
@@ -10,39 +9,63 @@
 }
 
 .AboutContainer {
-  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: .5rem;
+  overflow-y: scroll;
   border-radius: var(--border-radius);
-  border: 1px solid red;
+
 }
+
+.AboutContainer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+  padding-left: 0;
+}
+
+.AboutContainer ul li {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+}
+
 
 .Terms {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  border-radius: var(--border-radius);
-  border: 1px solid red;
-}
-
-.Terms ol {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  border-radius: var(--border-radius);
-  padding: 0.5rem;
-}
-
-.Terms ol li {
-  list-style: number;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: .5rem;
+  margin: .5rem;
+  border-radius: var(--border-radius);
+  overflow-y: scroll;
 }
+
+ol {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  counter-reset: item;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+ol li {
+  counter-increment: item;
+  margin-bottom: 0.5rem;
+}
+
+ol li:before {
+  content: counter(item) ") ";
+  font-weight: bold;
+  margin: .5rem;
+  color: var(--accent-color);
+}
+
 
 .BuymeCoffee {
   display: flex;
@@ -50,7 +73,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  border: 1px solid red;
+  overflow-y: scroll;
   border-radius: var(--border-radius);
 }
 
