@@ -1,70 +1,110 @@
-# Getting Started with Create React App
+# Savings Plan App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p>p>A React Js Web Application that enables registered users to track their savings by marking an amount saved each day. The app is divided into three sections, the sidebar, rightbar, and the maindash. The sidebar has menu items including Dashboard which has three sections too: the top, middle and bottom section. The top section has 3 cards - savings card, save card, and quotes card which fetches quotes from an API.</p>
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+<h4>Users can save a specified amount each day</h4>
 
-### `npm start`
+<ul>
+<li>The app displays two circular progress bars for the current month and year</li>
+<li>The app includes a form for users to fill out loan details whether they are a debit or a credit</li>
+<li>The app includes a savings table to keep track of savings made</li>
+<li>The app includes a notification section to keep track of all notifications</li>
+<li>The app includes a settings section to change the app theme</li>
+<li>The app includes a logout section to log out of the app</li>
+</ul>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<ul>
+<li>React Js</li>
+<li>React Router</li>
+<li>React Hooks</li>
+<li>React Context</li>
+<li>React Bootstrap</li>
+<li>React Icons</li>
+<li>React Toastify</li>
+<li>React Router</li>
+<li>React Router Dom</li>
+<li>React Router Bootstrap</li>
+<li>React Router Hash Link</li>
+<li>React Router Transition</li>
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h4>Clone the repository</h4>
 
-### `npm run build`
+```bash
+git clone
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<h4>Install dependencies</h4>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<h4>Run the app</h4>
 
-### `npm run eject`
+```bash
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## License
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[MIT](https://choosealicense.com/licenses/mit/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Author
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+[Victor Quaint](
 
-## Learn More
+## Acknowledgements
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<ul>
+<li>React Js</li>
+<li>React Router</li>
+<li>React Hooks</li>
+<li>React Context</li>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Screenshots
 
-### Code Splitting
+![Screenshot](
+![Screenshot](
+![Screenshot](
+![Screenshot](
+![Screenshot](
+![Screenshot](
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Live Demo
 
-### Analyzing the Bundle Size
+[Live Demo Link](
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Video Presentation
 
-### Making a Progressive Web App
+[Video Presentation Link](
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Future Features
 
-### Advanced Configuration
+<ul>
+<li>Users can save a specified amount each day</li>
+<li>The app displays two circular progress bars for the current month and year</li>
+<li>The app includes a form for users to fill out loan details whether they are a debit or a credit</li>
+<li>The app includes a savings table to keep track of savings made</li>
+<li>The app includes a notification section to keep track of all notifications</li>
+<li>The app includes a settings section to change the app theme</li>
+</ul>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🤝 Contributing
 
-### Deployment
+Contributions, issues and feature requests are welcome!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Feel free to check the [issues page](
 
-### `npm run build` fails to minify
+## Show your support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
